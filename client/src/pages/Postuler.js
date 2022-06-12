@@ -30,7 +30,7 @@ const Postuler = () => {
           <h1>Postuler</h1>
           <form onSubmit={handleSubmit(handleAddCours)}>
             <input
-              type="url"
+              type="text"
               name="curriculumVitae"
               placeholder="http://"
               {...register("curriculumVitae")}

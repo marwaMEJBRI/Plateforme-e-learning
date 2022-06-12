@@ -6,8 +6,6 @@ import chatSlice from "./slices/chatSlice";
 import MeetingSlice from "./slices/MeetingSlice";
 import postulerSlice from "./slices/postulerSlice";
 import coursListSlice from "./slices/coursListSlice";
-import CoursPrBSlice from "./slices/CoursPrBSlice";
-import CoursPrASlice from "./slices/CoursPrASlice";
 export default configureStore({
   reducer: {
     user: userReducer,
@@ -17,7 +15,6 @@ export default configureStore({
     meeting: MeetingSlice,
     postuler: postulerSlice,
     coursList: coursListSlice,
-    coursList: CoursPrBSlice,
-    coursList: CoursPrASlice,
+
   },
 });

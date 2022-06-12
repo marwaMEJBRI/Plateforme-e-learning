@@ -37,8 +37,10 @@ const Candidates = () => {
                 />
                  <a className="condidat-link" href={postuler.curriculumVitae}>
                   curriculumVitae
-                </a>  
+                </a>    
+
                 
+
                 {isChecked ? (
                   <>
                     <img src={check} className="imgCheck" />
