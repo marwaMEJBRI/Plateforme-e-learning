@@ -109,7 +109,7 @@ const RegisterPage = () => {
           </div>
           {errors.password?.message}
           <br />
-          {/* {userErrors && userErrors} */}
+          {userErrors && userErrors} 
           <button className="registerBtn">Register</button>
         </form>
       </div>
