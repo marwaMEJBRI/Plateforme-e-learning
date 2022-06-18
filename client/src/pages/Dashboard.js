@@ -10,34 +10,48 @@ const Dashboard = () => {
     dispatch(GetAllProfile());
   }, []);
   const { userList } = useSelector((state) => state.user);
-  const { isAuth , role} = useSelector((state) => state.user);
+  const { isAuth, role } = useSelector((state) => state.user);
 
   return (
-    
-
     <div className="meetingPage">
       <div
         className="meetinImgBag"
         style={{ backgroundImage: `url(${meetinImg})` }}
       ></div>
       <div className="bg-text">
-      {userList &&
-            userList.map((user) =>  (
+        {userList &&
+          userList.map((user) => (
             <div className="meetingBox">
-
-                     <div className="dashBox">
-                       <img className="" src={user.profilePic} alt="" />
-                       { user.role === "learner" ? 
-                        (<Link to ='/InfoLearner'> <h3>All user</h3></Link>)
-                        :                    
-                        (<Link to ='/AllCoursAdmin'> <h3>{user.role} : {user.firstName}</h3></Link> ) 
-                      }
-                     </div>
+              <div className="dashBox">
+                <img className="" src={user.profilePic} alt="" />
+                
+                {user.role === "admin" ? (
+                  <>
+                    <Link to="/Profile">
+                      {" "}
+                      <h3>My Profile</h3>
+                    </Link>
+                  </>
+                ) : user.role === "learner" ? (
+                  <>
+                    <Link to="/InfoLearner">
+                      
+                      <h3>All user</h3>
+                    </Link>
+                  </>
+                ) : user.role === "instructor" ? (
+                  <>
+                    <Link to="/AllCoursAdmin">
+                   
+                      <h3>All cours</h3>
+                    </Link>
+                  </>
+                ) : null}
+              </div>
             </div>
           ))}
       </div>
     </div>
-         
   );
 };
 

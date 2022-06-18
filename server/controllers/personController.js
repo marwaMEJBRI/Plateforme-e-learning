@@ -3,16 +3,6 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { validationResult } = require("express-validator");
 
-// const nodemailer = require("nodemailer");
-// process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
-// var transporter = nodemailer.createTransport({
-//   service: "Gmail",
-//   auth: {
-//     user: "????",
-//     pass: "????",
-//   },
-// });
-// register
 const register = async (req, res, next) => {
   try {
     const errors = validationResult(req);

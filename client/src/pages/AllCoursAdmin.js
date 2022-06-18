@@ -21,6 +21,7 @@ const AllCoursAdmin = () => {
           <div key={cours._id} className="coursePage coursAdmin">
             <div className="courseGroup">
               <div className="ownerCrs">
+              
                 <h1>{cours.owner.firstName}</h1>
                 <h1>{cours.owner.lastName}</h1>
               </div>

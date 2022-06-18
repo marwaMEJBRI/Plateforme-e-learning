@@ -16,7 +16,7 @@ const CoursEnglish = () => {
         coursList.map((cours) => (
           <div key={cours._id} ref={ref} className="coursePage">
             <div className="courseGroup">
-              {cours.title === "Anglais" ? (
+              {cours.title === "English" ? (
                 <>
                   <div className="ownerCrs">
                     <h1>instructeur | {cours.owner.firstName}</h1>
