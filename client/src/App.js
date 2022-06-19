@@ -86,7 +86,8 @@ function App() {
         </Route>
         
         {/* aucune page existe */}
-        <Route path="*" element={<ErrPage />}></Route>
+       {/* <Route path="*" element={<ErrPage />}></Route> */} 
+       
       </Routes>
       <Footer />
     </div>

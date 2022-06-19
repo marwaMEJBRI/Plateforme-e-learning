@@ -47,12 +47,12 @@ const Candidates = () => {
                   </>
                 ) : null}
                 <br />
-                <button
+               <button
                   class="noselect"
                   onClick={() => dispatch(deletePostulation(postuler._id))}
                 >
                   Delete candidate
-                </button>
+                </button>   
                 <br />
               </div>
             ) : null}
